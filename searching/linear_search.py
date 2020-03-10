@@ -1,4 +1,6 @@
 def linear_search(arr, x) :
+    # go over every element of array until we find the 
+    # search element
     for i in range(len(arr)) : 
         if x == arr[i] :
             return i
