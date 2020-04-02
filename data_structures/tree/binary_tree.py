@@ -19,8 +19,8 @@ class BinaryTree(object):
         as they are visited in
         a pre-order traversal."""
         # last letter is skipped because there is an extra
-        # dash because each element adds a dash with it, 
-        # and last element also does the same.        
+        # dash because each element adds a dash with it,
+        # and last element also does the same.
         return self.preorder_print(self.root, '')[ : -1]
 
     def preorder_search(self, start, find_val):

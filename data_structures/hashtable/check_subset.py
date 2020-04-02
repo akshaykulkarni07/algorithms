@@ -1,3 +1,9 @@
+# Given two arrays: arr1[0..m-1] and arr2[0..n-1]. 
+# Find whether arr2[] is a subset of arr1[] or not. 
+# Both the arrays are not in sorted order. It may 
+# be assumed that elements in both array are distinct.
+# https://www.geeksforgeeks.org/find-whether-an-array-is-subset-of-another-array-set-1/
+
 class HashTable(object):
     def __init__(self):
         self.table = [None]*255
@@ -27,7 +33,7 @@ class HashTable(object):
         hash value from a number.'''
         return num % 255
 
-def check_subarray(arr1, arr2):
+def check_subset(arr1, arr2):
     table = HashTable()
     for i in range(len(arr1)):
         table.store(arr1[i])
@@ -45,4 +51,4 @@ if __name__ == '__main__':
     arr2 = arr2.split(' ')
     arr1 = [int(i) for i in arr1]
     arr2 = [int(i) for i in arr2]
-    print(check_subarray(arr1, arr2))
+    print(check_subset(arr1, arr2))
